@@ -1,11 +1,11 @@
 // CSS CALCULATE UNIT MIXINS
 
 @function rem($px, $base: $font_size_rem) {
-  @if (unitless($px)) {
+  @if  unitless($px) {
     $px: $px * 1px;
   }
 
-  @if (unitless($base)) {
+  @if  unitless($base) {
     $base: $base * 1px;
   }
 
@@ -13,13 +13,14 @@
 }
 
 @function em($px, $base: 16px) {
-  @if (unitless($px)) {
+  @if  unitless($px) {
     $px: $px * 1px;
   }
 
-  @if (unitless($base)) {
+  @if  unitless($base) {
     $base: $base * 1px;
   }
+
   @return ($px / $base) * 1em;
 }
 
@@ -58,7 +59,7 @@
 }
 
 @mixin lineHeight($line, $font_size) {
-  line-height: fcLineHeight($line, $font_size);
+  line-height: fclineheight($line, $font_size);
 }
 
 @mixin bg-classes($name, $color) {
@@ -282,7 +283,6 @@ $mixin-heading-h3a-font-size: rem(28px);
 $mixin-heading-h4-font-size: rem(26px);
 $mixin-heading-h5-font-size: rem(20px);
 $mixin-heading-h6-font-size: rem(18px);
-
 $mixin-heading-font-weight: 500;
 $mixin-heading-font-weight-book: 400;
 
@@ -491,7 +491,7 @@ $mixin-text-p-book-font-size: rem(14px);
 @mixin mb-24 {
   margin-bottom: rem(24px);
 
-  @include max-md() {
+  @include max-md {
     margin-bottom: rem(18px);
   }
 }
@@ -560,6 +560,7 @@ $mixin-text-p-book-font-size: rem(14px);
 
 @mixin cardRadius {
   @include globalRadius;
+
   overflow: hidden;
 }
 
@@ -579,6 +580,7 @@ $mixin-text-p-book-font-size: rem(14px);
   transition: background-color 0.2s ease-in-out;
 
   @include btnRadius;
+
   @include is-pc {
     padding: 0 rem(24px);
     height: rem(50px);

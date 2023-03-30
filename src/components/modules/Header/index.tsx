@@ -5,7 +5,12 @@ import s from "./Header.module.scss";
 
 const Header: React.FunctionComponent = () => {
   return (
-    <header className={cn("d-flex align-items-center justify-content-center", s.header)}>
+    <header
+      className={cn(
+        "d-flex align-items-center justify-content-center",
+        s.header
+      )}
+    >
       header
     </header>
   );

@@ -11,8 +11,8 @@ type IProps = {
     seoImage: string;
     keywords: string;
   };
-  posts: Post[],
-}
+  posts: Post[];
+};
 
 const HomePage: NextPage<IProps> = ({ posts }) => {
   return <HomePageTemplate posts={posts} />;
@@ -31,7 +31,7 @@ export const getServerSideProps: GetServerSideProps<IProps> = async () => {
       },
       posts,
     }, // will be passed to the page component as props
-  }
+  };
 };
 
 export default HomePage;

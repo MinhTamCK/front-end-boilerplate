@@ -8,9 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "pretty": "prettier --write --config .prettierrc.json \"./{src,pages,server}/**/*\".{ts,tsx}",
-    "lint:css": "stylelint \"**/*.scss\" --ignore-path .gitignore --fix"
+    "lint:css": "stylelint \"**/*.scss\" --ignore-path .gitignore --fix",
+    "analyze": "ANALYZE=true yarn build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^13.2.4",
     "@types/node": "18.15.10",
     "@types/react": "18.0.30",
     "@types/react-dom": "18.0.11",
@@ -22,9 +24,11 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "zustand": "^4.3.6"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",

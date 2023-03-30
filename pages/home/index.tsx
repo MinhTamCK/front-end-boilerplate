@@ -1,20 +1,19 @@
 import { GetServerSideProps, NextPage } from "next";
 
 import HomePageTemplate from "@/components/templates/HomePage";
+import { SeoInfo } from "@/interfaces/base";
 import { Post } from "@/interfaces/post";
 import { getPosts } from "@/services/api/post";
+import usePostStore from "@/stores/post";
 
 type IProps = {
-  seoInfo: {
-    title: string;
-    description: string;
-    seoImage: string;
-    keywords: string;
-  };
+  seoInfo: SeoInfo;
   posts: Post[];
 };
 
 const HomePage: NextPage<IProps> = ({ posts }) => {
+  const setPosts = usePostStore(state => state.setPosts);
+  setPosts(posts);
   return <HomePageTemplate posts={posts} />;
 };
 
@@ -24,13 +23,13 @@ export const getServerSideProps: GetServerSideProps<IProps> = async () => {
   return {
     props: {
       seoInfo: {
-        title: "string",
-        description: "string",
-        seoImage: "string",
-        keywords: "string",
+        title: "home",
+        description: "description",
+        seoImage: "seoImage",
+        keywords: "keywords",
       },
       posts,
-    }, // will be passed to the page component as props
+    },
   };
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import cn from "classnames";
+import Link from 'next/link'
 
 import s from "./Header.module.scss";
 
@@ -11,7 +12,8 @@ const Header: React.FunctionComponent = () => {
         s.header
       )}
     >
-      header
+      <Link href="/">Home</Link>
+      <Link href="/post">Post</Link>
     </header>
   );
 };

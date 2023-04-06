@@ -8,6 +8,7 @@ type Props = {
 };
 
 const Default: React.FunctionComponent<Props> = ({ children }: Props) => {
+
   return (
     <>
       <Header />

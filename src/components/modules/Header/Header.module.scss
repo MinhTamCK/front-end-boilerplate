@@ -1,6 +1,6 @@
 .header {
   height: rem(70px);
   gap: rem(30px);
-  background-color: $gray;
-  color: $blue;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }

@@ -1,5 +1,5 @@
 .footer {
   height: rem(70px);
-  background-color: $blue;
-  color: $white;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }

@@ -1,16 +1,16 @@
 body,
 body[data-theme="light"] {
-  --color-text-primary: #27201a;
-  --color-text-secondary: #076963;
-  --color-bg-primary: #fff;
-  --color-bg-toggle: #1e90ff;
+  --theme-bg: #fcfcfc;
+  --theme-hover-bg: #f6f6f6;
+  --theme-text: #1f2937;
+  --theme-bc: #e5e7eb;
 }
 
 body[data-theme="dark"] {
-  --color-text-primary: #e3e3e3;
-  --color-text-secondary: #ff6b00;
-  --color-bg-primary: #15232d;
-  --color-bg-toggle: #a9a9a9;
+  --theme-bg: #181818;
+  --theme-hover-bg: #2d2d2d;
+  --theme-text: #f3f4f6;
+  --theme-bc: #2d2d2d;
 }
 
 input[type="number"]::-webkit-outer-spin-button,

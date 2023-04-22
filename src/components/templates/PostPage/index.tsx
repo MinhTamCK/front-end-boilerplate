@@ -11,6 +11,7 @@ const PostPage: React.FunctionComponent = () => {
   return (
     <div className="container">
       <div className="row">
+        <h1>This is post page</h1>
         {posts?.map(post => (
           <div key={post.id} className={cn("col-2", s.post)}>
             <div>{post.title}</div>
@@ -18,6 +19,7 @@ const PostPage: React.FunctionComponent = () => {
             <div>{post.body}</div>
           </div>
         ))}
+
       </div>
     </div>
   );

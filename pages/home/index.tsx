@@ -28,7 +28,7 @@ export const getServerSideProps: GetServerSideProps<IProps> = async () => {
         seoImage: "seoImage",
         keywords: "keywords",
       },
-      posts,
+      posts
     },
   };
 };

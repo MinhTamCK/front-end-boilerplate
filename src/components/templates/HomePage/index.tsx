@@ -10,6 +10,7 @@ const HomePage: React.FunctionComponent<{ posts: Post[] }> = ({ posts }) => {
   return (
     <div className="container">
       <div className="row">
+        <h1>This is home page</h1>
         {posts?.map(post => (
           <div key={post.id} className={cn("col-2", s.post)}>
             <div>{post.title}</div>

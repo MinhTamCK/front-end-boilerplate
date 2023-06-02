@@ -1,20 +1,20 @@
 import React from "react";
 import cn from "classnames";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
-import { Theme } from "@/enums/common";
-import useTheme from "@/hooks/theme";
+// import { Theme } from "@/enums/common";
+// import useTheme from "@/hooks/theme";
 
 import s from "./Header.module.scss";
 
 const Header: React.FunctionComponent = () => {
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
 
-  const changeTheme = () => {
-    theme === Theme.LIGHT ? setTheme(Theme.DARK) : setTheme(Theme.LIGHT);
-  };
+  // const changeTheme = () => {
+  //   theme === Theme.LIGHT ? setTheme(Theme.DARK) : setTheme(Theme.LIGHT);
+  // };
 
   return (
     <header
@@ -26,13 +26,13 @@ const Header: React.FunctionComponent = () => {
       <div>FE Boilerplate</div>
       <Link href="/">Home</Link>
       <Link href="/post">Post</Link>
-      <div className={s.header_theme} onClick={changeTheme}>
+      {/* <div className={s.header_theme} onClick={changeTheme}>
         {theme === Theme.LIGHT ? (
           <FontAwesomeIcon icon={faSun} size="4x" />
         ) : (
           <FontAwesomeIcon icon={faMoon} size="4x" />
         )}
-      </div>
+      </div> */}
     </header>
   );
 };

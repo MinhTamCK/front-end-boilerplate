@@ -12,7 +12,7 @@ import { IpfsStorage } from "@/models";
 
 import s from "./HomePage.module.scss";
 
-const HomePage: React.FunctionComponent<> = () => {
+const HomePage: React.FunctionComponent = () => {
   const setUser = useUserStore(state => state.setUser);
   const user = useUserStore(state => state.user);
 

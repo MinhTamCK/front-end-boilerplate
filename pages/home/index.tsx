@@ -14,7 +14,7 @@ type IProps = {
 const HomePage: NextPage<IProps> = ({ posts }) => {
   const setPosts = usePostStore(state => state.setPosts);
   setPosts(posts);
-  return <HomePageTemplate posts={posts} />;
+  return <HomePageTemplate />;
 };
 
 export const getServerSideProps: GetServerSideProps<IProps> = async () => {
@@ -28,7 +28,7 @@ export const getServerSideProps: GetServerSideProps<IProps> = async () => {
         seoImage: "seoImage",
         keywords: "keywords",
       },
-      posts
+      posts,
     },
   };
 };

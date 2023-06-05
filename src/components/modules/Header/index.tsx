@@ -7,6 +7,7 @@ import useTheme from "@/hooks/theme";
 // icons
 import MoonSVG from "@/static/icons/moon-solid.svg";
 import SunSVG from "@/static/icons/sun-solid.svg";
+import GithubSVG from "@/static/icons/github.svg";
 
 import s from "./Header.module.scss";
 
@@ -24,15 +25,18 @@ const Header: React.FunctionComponent = () => {
         s.header
       )}
     >
-      <div>FE Boilerplate</div>
-      <Link href="/">Home</Link>
-      <Link href="/post">Post</Link>
+      <Link href="/">Web3 File</Link>
       <div className={s.header_theme} onClick={changeTheme}>
-        {theme === Theme.LIGHT ? (
-          <MoonSVG />
-        ) : (
-          <SunSVG className={s.header_white} />
-        )}
+        {theme === Theme.LIGHT ? <MoonSVG /> : <SunSVG />}
+      </div>
+      <div className={s.header_theme}>
+        <a
+          href="https://github.com/MinhTamCK/front-end-boilerplate"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GithubSVG />
+        </a>
       </div>
     </header>
   );

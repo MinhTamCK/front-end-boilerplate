@@ -1,4 +1,6 @@
 .default {
   min-height: 80vh;
   padding: rem(10) 0;
+  background: var(--theme-bg);
+  color: var(--theme-text);
 }

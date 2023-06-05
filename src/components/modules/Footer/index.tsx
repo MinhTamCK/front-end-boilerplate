@@ -11,7 +11,7 @@ const Footer: React.FunctionComponent = () => {
         s.footer
       )}
     >
-      Footer
+      <div className={cn("container", s.footer_content)}>Footer</div>
     </footer>
   );
 };

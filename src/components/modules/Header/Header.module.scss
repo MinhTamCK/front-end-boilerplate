@@ -7,15 +7,16 @@
     color: var(--theme-text);
     text-decoration: none;
   }
+  svg {
+    width: rem(15px);
+    height: rem(15px);
+    path {
+      fill: var(--theme-text);
+    }
+  }
 
   &_theme {
     width: rem(10px);
     cursor: pointer;
-  }
-
-  &_white {
-    path {
-      fill: $white;
-    }
   }
 }

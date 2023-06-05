@@ -2,4 +2,10 @@
   height: rem(70px);
   background: var(--theme-bg);
   color: var(--theme-text);
+
+  &_content {
+    padding: rem(20) 0;
+    border-top: 1px solid var(--theme-text);
+    text-align: center;
+  }
 }

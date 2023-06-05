@@ -100,7 +100,7 @@ const HomePage: React.FunctionComponent = () => {
   return (
     <div className={cn("container", s.home)}>
       <div className="row">
-        <h1>This is home page</h1>
+        <h1>Your account:</h1>
         <div>
           <p>Address: {user.address}</p>
           <p>Balance: {user.balance} ETH</p>
@@ -126,8 +126,8 @@ const HomePage: React.FunctionComponent = () => {
         </div>
         {isUploading && <div>Loading...</div>}
       </div>
-      <div className="row">
-        <h1>Your list files</h1>
+      <div className={cn("row pt-5", yourListFiles?.length < 1 && "d-none")}>
+        <h2>Your list files</h2>
         <div>
           {yourListFiles?.length > 0 &&
             yourListFiles.map(item => (

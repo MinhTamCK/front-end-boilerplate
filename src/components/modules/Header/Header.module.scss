@@ -12,4 +12,10 @@
     width: rem(10px);
     cursor: pointer;
   }
+
+  &_white {
+    path {
+      fill: $white;
+    }
+  }
 }

@@ -4,6 +4,9 @@ const path = require("path");
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
+const withPlugins = require("next-compose-plugins");
+const withSvgr = require("next-plugin-svgr");
+
 const nextConfig = {
   // experimental: {
   //   appDir: true,
@@ -16,4 +19,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = withPlugins([withBundleAnalyzer, withSvgr], nextConfig);

@@ -44,10 +44,7 @@ const HomePage: React.FunctionComponent = () => {
     const modelFields = {
       address: user.address,
       origin_ipfs_url: urls?.[0],
-      public_ipfs_url: `https://ipfs-2.thirdwebcdn.com/${urls?.[0]?.replace(
-        "://",
-        "/"
-      )}`,
+      public_ipfs_url: `https://ipfs.io/${urls?.[0]?.replace("://", "/")}`,
     };
     const abc = await DataStore.save(new IpfsStorage(modelFields));
     console.log("save file", abc);
@@ -128,13 +125,6 @@ const HomePage: React.FunctionComponent = () => {
           </div>
         </div>
         {isUploading && <div>Loading...</div>}
-        {/* {posts?.map(post => (
-          <div key={post.id} className={cn("col-2", s.post)}>
-            <div>{post.title}</div>
-            <hr />
-            <div>{post.body}</div>
-          </div>
-        ))} */}
       </div>
       <div className="row">
         <h1>Your list files</h1>

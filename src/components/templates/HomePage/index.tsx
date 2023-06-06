@@ -3,7 +3,6 @@ import * as ethers from "ethers";
 import cn from "classnames";
 
 import Button from "react-bootstrap/Button";
-// import { Post } from "@/interfaces/post";
 import useUserStore from "@/stores/user";
 // Upload files to IPFS
 import { useStorageUpload, MediaRenderer } from "@thirdweb-dev/react";
@@ -126,12 +125,14 @@ const HomePage: React.FunctionComponent = () => {
         </div>
         {isUploading && <div>Loading...</div>}
       </div>
-      <div className={cn("row pt-5", yourListFiles?.length < 1 && "d-none")}>
+      <div className={cn("pt-5", yourListFiles?.length < 1 && "d-none")}>
         <h2>Your list files</h2>
-        <div>
+        <div className="row">
           {yourListFiles?.length > 0 &&
             yourListFiles.map(item => (
-              <MediaRenderer key={item.id} src={item.origin_ipfs_url} />
+              <div key={item.id} className="col-3">
+                <MediaRenderer src={item.origin_ipfs_url} />
+              </div>
             ))}
         </div>
       </div>
